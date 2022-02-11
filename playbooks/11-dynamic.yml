@@ -1,0 +1,9 @@
+- name: Update all servers
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: update dynamic info
+    template:
+      src: dynamic.j2
+      dest: /var/www/html/dynamic.html

@@ -1,0 +1,16 @@
+- name: update all server
+  hosts: all
+  become: yes
+
+
+  tasks:
+  - name: install git
+    package:
+      name: git
+      state: present
+
+
+  - name: deploy ecomm
+    git:
+      dest: /var/www/html
+      repo: https://github.com/afsanamoni/ecomm.git

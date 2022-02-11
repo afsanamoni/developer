@@ -1,0 +1,9 @@
+- name: Update all servers
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: update page on Ubuntu
+    copy:
+      src: static.html
+      dest: /var/www/html

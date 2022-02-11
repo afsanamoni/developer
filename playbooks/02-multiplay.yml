@@ -1,0 +1,10 @@
+---
+- name: update all server
+  hosts: all
+
+  tasks:
+  - name: create dir w1
+    file:
+     path: /home/centos/w1
+     state: directory
+...
